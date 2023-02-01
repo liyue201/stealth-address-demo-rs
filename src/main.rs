@@ -62,8 +62,8 @@ fn main() {
     // can compute P = M + G * hash(S)
 
     let temp = BigUint::from_bytes_be(S.serialize().as_slice());
-    let odder = BigUint::from_bytes_be(CURVE_ORDER.as_slice());
-    let hashS = temp.mod_floor(&odder); // hash(S)
+    let order = BigUint::from_bytes_be(CURVE_ORDER.as_slice());
+    let hashS = temp.mod_floor(&order); // hash(S)
     let mut hash_s = [0u8; 32];
     hash_s[..].copy_from_slice(hashS.to_bytes_be().as_slice());
 
@@ -92,6 +92,7 @@ fn main() {
 
     let m_big = BigUint::from_bytes_be(m.secret_bytes().as_slice());
     let p = m_big.add(hashS); // p = m + hash(S)
+    let p = p.mod_floor(&order); // p = p % N,  private key must be less than the order of the curve
 
     println!("p: {:?}", hex::encode(p.to_bytes_be()));
 
