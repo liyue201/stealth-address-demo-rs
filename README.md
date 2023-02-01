@@ -1,5 +1,5 @@
 # stealth-address-demo-rs
-Rust implementation of stealth address, see vitalik's post "[An incomplete guide to stealth addresses](https://vitalik.ca/general/2023/01/20/stealth.html)"
+Rust implementation of the stealth addresses described in vitalik's post "[An incomplete guide to stealth addresses](https://vitalik.ca/general/2023/01/20/stealth.html)"
 
 ## Run
 
