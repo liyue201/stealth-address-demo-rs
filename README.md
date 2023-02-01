@@ -1,1 +1,25 @@
 # stealth-address-demo-rs
+Rust implementation of stealth address, see vitalik's post "[An incomplete guide to stealth addresses](https://vitalik.ca/general/2023/01/20/stealth.html)"
+
+## Run
+
+run
+```
+cargo run
+```
+
+output
+```
+m: "3b3b08bba24858f7ab8b302428379198e521359b19784a40aeb4daddf4ad911c"
+M: "02d3f00f05369ac51ac36d7014a53f63aaf307fa5bce8955ba282284861c2a1200"
+r: "9d23679323734fdf371017048b4a73cf160566a0ccd69fa087299888d9fbc59f"
+R: "02e86e0414d08afcf944b0b195f260e34fee9050238b6875ab23f8c6a78bcafadf"
+S : "02450da8a94a94e04e30458fa83e4323669bef338d6aec659a63ea86aa032a3483"
+S2: "02450da8a94a94e04e30458fa83e4323669bef338d6aec659a63ea86aa032a3483"
+P: "030cad79fb40901f206e3c064331b08638c029021e67e59a5a97dd439e3e457a30"
+A: 0x5fef98bb8e793046e1e2fd0907649ffe913fb416
+p: "8048b164ecdd3945dbd0bfcc667ab5020bb2af5b25d36f6392faa46e576b431d"
+P2: "030cad79fb40901f206e3c064331b08638c029021e67e59a5a97dd439e3e457a30"
+
+```
+

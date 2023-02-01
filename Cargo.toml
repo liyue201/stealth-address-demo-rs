@@ -1,0 +1,14 @@
+[package]
+name = "stealth-address-demo-rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+secp256k1 = "0.26"
+hex = "0.4.3"
+num-bigint = "0.4.3"
+num-integer = "0.1.45"
+sha3 = "0.10.6"
+ethereum-types = "0.14.1"
