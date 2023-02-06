@@ -1,4 +1,5 @@
 use std::ops::Add;
+use std::str::FromStr;
 
 use ethereum_types::H160;
 use num_bigint::BigUint;
@@ -18,9 +19,7 @@ fn main() {
     // where G is a commonly-agreed generator point for the elliptic curve.
     // The stealth meta-address is an encoding of M.
 
-    let temp =
-        hex::decode("3b3b08bba24858f7ab8b302428379198e521359b19784a40aeb4daddf4ad911c").unwrap();
-    let m = SecretKey::from_slice(temp.as_slice()).unwrap();
+    let m = SecretKey::from_str("3b3b08bba24858f7ab8b302428379198e521359b19784a40aeb4daddf4ad911c").unwrap();
     let M = PublicKey::from_secret_key(&secp, &m);
 
     println!("m: {:?}", hex::encode(m.secret_bytes()));
@@ -29,9 +28,7 @@ fn main() {
     // 2.
     // Alice generates an ephemeral key r, and publishes the ephemeral public key R
     // = G * r.
-    let temp =
-        hex::decode("9d23679323734fdf371017048b4a73cf160566a0ccd69fa087299888d9fbc59f").unwrap();
-    let r = SecretKey::from_slice(temp.as_slice()).unwrap();
+    let r = SecretKey::from_str("9d23679323734fdf371017048b4a73cf160566a0ccd69fa087299888d9fbc59f").unwrap();
     let R = PublicKey::from_secret_key(&secp, &r);
 
     println!("r: {:?}", hex::encode(r.secret_bytes()));
